@@ -36,9 +36,26 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
     
     var dead = Bool()
     
+    var scoreLabel = UILabel()
+    var highscoreLabel = UILabel()
     
     override func viewDidLoad() {
         self.createScene()
+        scoreLabel = UILabel(frame: CGRect(x: self.view.frame.width / 2, y: self.view.frame.height / 2 + self.view.frame.height / 2.5, width: self.view.frame.width, height: 100))
+        scoreLabel.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 - self.view.frame.height / 2.5)
+        scoreLabel.textAlignment = .center
+        scoreLabel.text = "Score \(score)"
+        scoreLabel.textColor = UIColor.white
+        self.view.addSubview(scoreLabel)
+        
+            
+        highscoreLabel = UILabel(frame: CGRect(x: self.view.frame.width / 2, y: self.view.frame.height / 2 + self.view.frame.height / 2.5, width: self.view.frame.width, height: 100))
+        highscoreLabel.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2 + self.view.frame.height / 2.5)
+        highscoreLabel.textAlignment = .center
+        highscoreLabel.text = "Highscore \(highscore)"
+        highscoreLabel.textColor = UIColor.white
+        self.view.addSubview(highscoreLabel)
+        
         scene.physicsWorld.contactDelegate = self
     }
     
@@ -52,6 +69,10 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         node.runAction(SCNAction.fadeOut(duration: 0.5))
     }
     
+    func updateLabel(){
+            scoreLabel.text = "Score \(score)"
+            highscoreLabel.text = "Highscore \(highscore)"
+    }
     /*func createCoin(box : SCNNode){
         scene.physicsWorld.gravity = SCNVector3Make(0, 0, 0)
 
@@ -93,6 +114,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
     func addScore(){
         score += 1
         print(score)
+        self.performSelector(onMainThread: Selector("updateLabel"), with: nil, waitUntilDone: false)
         
         if score > highscore{
             
@@ -178,11 +200,13 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
             person.removeAllActions()
             person.runAction(SCNAction.repeatForever(SCNAction.move(by: SCNVector3Make(-100, 0, 0), duration: 20)))
             goingLeft = true
+            addScore()
         }
         else{
             person.removeAllActions()
             person.runAction(SCNAction.repeatForever(SCNAction.move(by: SCNVector3Make(0, 0, -100), duration: 20)))
             goingLeft = false
+            addScore()
         }
     }
     
