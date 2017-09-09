@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE6064C41F6468EB002382C9 /* coin.dae in Resources */ = {isa = PBXBuildFile; fileRef = BE6064C31F6468EB002382C9 /* coin.dae */; };
 		BEBEA37A1F5D2E8E004480EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEA3791F5D2E8E004480EA /* AppDelegate.swift */; };
 		BEBEA37C1F5D2E8E004480EA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBEA37B1F5D2E8E004480EA /* art.scnassets */; };
 		BEBEA37E1F5D2E8E004480EA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEA37D1F5D2E8E004480EA /* GameViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE6064C31F6468EB002382C9 /* coin.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = coin.dae; sourceTree = "<group>"; };
 		BEBEA3761F5D2E8E004480EA /* Kosmonaut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kosmonaut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBEA3791F5D2E8E004480EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBEA37B1F5D2E8E004480EA /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		BEBEA3781F5D2E8E004480EA /* Kosmonaut */ = {
 			isa = PBXGroup;
 			children = (
+				BE6064C31F6468EB002382C9 /* coin.dae */,
 				BEBEA3791F5D2E8E004480EA /* AppDelegate.swift */,
 				BEBEA37B1F5D2E8E004480EA /* art.scnassets */,
 				BEBEA37D1F5D2E8E004480EA /* GameViewController.swift */,
@@ -242,6 +245,7 @@
 				BEBEA3861F5D2E8E004480EA /* LaunchScreen.storyboard in Resources */,
 				BEBEA3831F5D2E8E004480EA /* Assets.xcassets in Resources */,
 				BEBEA3811F5D2E8E004480EA /* Main.storyboard in Resources */,
+				BE6064C41F6468EB002382C9 /* coin.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +524,7 @@
 				BEBEA3A21F5D2E8E004480EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEBEA3A31F5D2E8E004480EA /* Build configuration list for PBXNativeTarget "KosmonautTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +533,7 @@
 				BEBEA3A51F5D2E8E004480EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEBEA3A61F5D2E8E004480EA /* Build configuration list for PBXNativeTarget "KosmonautUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +542,7 @@
 				BEBEA3A81F5D2E8E004480EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
