@@ -130,8 +130,8 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         
         if (deleteBox?.position.x)! > person.position.x + 1 || (deleteBox?.position.z)! > person.position.z + 1{
             prevBoxNumber += 1
-            fadeOut(node: deleteBox!)
-            deleteBox?.removeFromParentNode()
+            //fadeOut(node: deleteBox!)
+            //deleteBox?.removeFromParentNode()
             createBox()
         }
         
@@ -157,7 +157,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate, SCNPhysics
         }), SCNAction.run({ node in
             self.createScene()
         })])
-        
+        score = 0
         person.runAction(sequence)
     }
     
